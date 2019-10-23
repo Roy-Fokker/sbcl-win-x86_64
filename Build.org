@@ -1,0 +1,29 @@
+#+title: How to build SBCL?
+
+* Environment requirements
+** Install
+   - MSYS2
+   - SBCL (latest version from site)
+   - GNU GCC Toolchain package from MSYS2
+
+** Configure
+   - Windows Path for MSYS2
+   - Windows Path for SBCL
+   - Environment Variable: SBCL_HOME=<SBCL exe directory>
+   - Environment Variable: GNUMAKE=mingw32-make
+
+* Build steps
+  - Open CMD
+  - Run make.sh
+
+* Install steps
+  - Copy 
+	| File      | From                        |
+	|-----------+-----------------------------|
+	| sbcl.exe  | <Source Dir>/src/runtime/   |
+	| sbcl.core | <Source Dir>/output/        |
+	| contrib   | <Source Dir>/obj/sbcl_home/ |
+
+* Configure
+  - Add new SBCL directory to PATH, remove old one.
+  - Update Environment variable: SBCL_HOME=<New SBCL exe directory>
