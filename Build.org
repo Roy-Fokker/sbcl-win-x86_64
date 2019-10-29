@@ -24,6 +24,11 @@
 	| sbcl.core | <Source Dir>/output/        |
 	| contrib   | <Source Dir>/obj/sbcl_home/ |
 
+* Test
+  - change environment variable for CMD
+    =SET SBCL_HOME=<PATH To new SBCL directory>=
+  - run sbcl.exe 
+
 * Configure
   - Add new SBCL directory to PATH, remove old one.
   - Update Environment variable: SBCL_HOME=<New SBCL exe directory>
