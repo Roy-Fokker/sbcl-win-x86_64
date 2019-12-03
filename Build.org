@@ -2,6 +2,7 @@
 
 * Environment requirements
 ** Install
+   - Git for Windows
    - MSYS2
    - SBCL (latest version from site)
    - GNU GCC Toolchain package from MSYS2
@@ -32,3 +33,28 @@
 * Configure
   - Add new SBCL directory to PATH, remove old one.
   - Update Environment variable: SBCL_HOME=<New SBCL exe directory>
+
+* Batch File
+** parameters
+   - %1 : directory of new sbcl source
+   - %2 : directory of where new build is to be placed
+** environment
+   - GNUMAKE : path to mingw32-make
+   - SBCL_HOME : Previous version of SBCL
+** Batch File sample
+#+begin_src bat
+  SET GNUMAKE="mingw32-make"
+  SET SBCL_HOME="E:\Lisp\sbcl\1.5.8"
+
+  cd %1
+
+  call make.sh
+
+  cd ..
+  mkdir %2
+  mkdir %2\contrib
+
+  copy %1\src\runtime\sbcl.exe %2
+  copy %1\output\sbcl.core %2
+  copy %1\obj\sbcl-home\contrib\* %2\contrib\
+#+end_src
