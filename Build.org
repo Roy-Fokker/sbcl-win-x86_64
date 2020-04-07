@@ -7,8 +7,12 @@
    - SBCL (latest version from site)
    - GNU GCC Toolchain package from MSYS2
 
+** Source
+   Download from [[SBCL Download][http://sbcl.org/platform-table.html]].
+   Extract.
+
 ** Configure
-   - Windows Path for MSYS2
+   - Windows Path for ~MSYS2~, must ensure ~MSYS2~ directory is after ~git-for-windows~ directory.
    - Windows Path for SBCL
    - Environment Variable: SBCL_HOME=<SBCL exe directory>
    - Environment Variable: GNUMAKE=mingw32-make
@@ -38,13 +42,15 @@
 ** parameters
    - %1 : directory of new sbcl source
    - %2 : directory of where new build is to be placed
+
 ** environment
    - GNUMAKE : path to mingw32-make
    - SBCL_HOME : Previous version of SBCL
+
 ** Batch File sample
 #+begin_src bat
   SET GNUMAKE="mingw32-make"
-  SET SBCL_HOME="E:\Lisp\sbcl\1.5.8"
+  SET SBCL_HOME="E:\Lisp\sbcl\2.0.0"
 
   cd %1
 
