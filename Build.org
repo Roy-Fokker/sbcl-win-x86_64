@@ -40,12 +40,12 @@
 
 * Batch File
 ** parameters
-   - %1 : directory of new sbcl source
-   - %2 : directory of where new build is to be placed
+   - =%1= : directory of new sbcl source
+   - =%2= : directory of where new build is to be placed
 
 ** environment
-   - GNUMAKE : path to mingw32-make
-   - SBCL_HOME : Previous version of SBCL
+   - =GNUMAKE= : path to mingw32-make
+   - =SBCL_HOME= : Previous version of SBCL
 
 ** Batch File sample
 #+begin_src bat
