@@ -8,7 +8,7 @@
    - GNU GCC Toolchain package from MSYS2
 
 ** Source
-   Download from [[SBCL Download][http://sbcl.org/platform-table.html]].
+   Download from [[http://sbcl.org/platform-table.html][SBCL Download]].
    Extract.
 
 ** Configure
